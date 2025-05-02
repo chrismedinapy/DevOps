@@ -1,0 +1,35 @@
+apiVersion: v2
+name: hola-mundo
+description: >
+  Helm chart para desplegar el proyecto "Hola Mundo", diseñado como entorno de laboratorio
+  y pruebas para experimentar con configuración de pipelines, despliegues y entornos controlados.
+  No recomendado para producción.
+
+type: application
+version: 0.1.0
+appVersion: "22.0.0" # Node.js 22
+
+keywords:
+  - laboratorio
+  - pruebas
+  - CI/CD
+  - helm
+  - nodejs
+home: https://github.com/chrismedinapy/hola-mundo
+sources:
+  - https://github.com/chrismedinapy/hola-mundo
+icon: https://www.freepik.com/icon/hello-world_8844577
+maintainers:
+  - name: Chris Medinapy
+    email: chris@example.org
+annotations:
+  category: laboratorio
+  stack.nodejs: "22"
+  usage: >
+    Este chart fue creado como parte del proyecto de laboratorio "Hola Mundo", el cual permite
+    realizar experimentos de forma segura sin afectar otros entornos. Recomendado para DevOps,
+    desarrolladores backend y entornos CI.
+
+  warning: >
+    Este proyecto NO está destinado para entornos de producción. Usalo solo para pruebas
+    y validaciones de infraestructura y pipelines.

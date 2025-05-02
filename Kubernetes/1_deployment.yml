@@ -1,0 +1,32 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: hola-mundo
+spec:
+  selector:
+    matchLabels:
+      app: hola-mundo
+  template:
+    metadata:
+      labels:
+        app: hola-mundo
+    spec:
+      containers:
+        - name: hola-mundo
+          image: registry-local:5000/admin/hola-mundo:latest
+          resources:
+            limits:
+              memory: "200Mi"
+              cpu: "500m"
+            request:
+              memory: "100Mi"
+              cpu: "100m"
+          livenessProbe:
+            httpGet:
+              path: /hola-mundo/v1/healthcheck
+              port: 3000
+            initialDelaySeconds: 15
+            periodSeconds: 60
+          envFrom:
+            - configMapRef:
+                name: hola-mundo

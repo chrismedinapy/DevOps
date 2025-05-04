@@ -1,4 +1,23 @@
 #!/bin/bash
+# =========================================================================================================
+# Scrip: comprimir-logs.sh
+# Descripcion:
+#   Comprime archivos .log dentro de una carpeta sespecifica si supera un
+#   tamano maximo definido. usa gzip y agrega un sufijo incremental (.1, .2, .3 ...)
+#   para evitar sobreescribir versiones anteriores.
+# 
+# Uso:
+#   ./comprimir-logs.sh [ tamano_max_en_MB ] [carpeta_logs ]
+# 
+# Parametros:
+#   tamano_max_en_MB    [opcional] > Tamano maximo permitido antes de comprimir (default: 100MB)
+#   carpeta_logs           [opcional] > Carpeta donde buscar archivos .log (default: /var/log/nginx)
+# Requisitos
+#   - Compatible con macOS
+#   - gzip instalado
+# Ejemplos:
+#   ./comprimir-logs.sh                 # Usa 100MB y /var/log/nginx
+#   ./comprimir-logs.sh 50 /tmp/logs    # Usa 50MB y /tmp/logs
 
 # Parametros opcionales
 MAX_SIZE_MB=${1:-100}

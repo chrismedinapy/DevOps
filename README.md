@@ -19,6 +19,7 @@ Contiene scripts en Bash para automatización de tareas:
 - Contiene un servicio de prueba llamado `hola-mundo`.
 - Incluye un `Dockerfile` para dockerizar la app.
 - El `docker-compose.yml` levanta el servicio `hola-mundo` junto con PostgreSQL y monta volúmenes necesarios.
+- 🔐 Por seguridad, el archivo `.env` no está en el repositorio. Se debe **copiar y renombrar `.env_example` a `.env`** y completar con las variables correspondientes.
 
 ---
 
